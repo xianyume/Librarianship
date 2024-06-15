@@ -1,5 +1,5 @@
 # Librarianship
-我的期末作业
+我和朋友一起的期末作业
 
 后端：SpringBoot 3.30、Mybatis、MySQL
 
