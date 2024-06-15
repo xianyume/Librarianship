@@ -6,6 +6,7 @@ CREATE DATABASE librarianship
 USE librarianship;
 DROP TABLE IF EXISTS `book`;
 DROP TABLE IF EXISTS `form`;
+DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `librarianship`.`book` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT '书籍编号' ,
@@ -36,3 +37,12 @@ INSERT INTO `librarianship`.`form` (`form_name`, `form_description`, `create_tim
 VALUES ('古典文学', '中国古典文学是中国文学史上闪烁着灿烂光辉的经典性作品或优秀作品，它是世界文学宝库中令人瞩目的瑰宝。', NOW(), NOW());
 INSERT INTO `librarianship`.`form` (`form_name`, `form_description`, `create_time`, `update_time`)
 VALUES ('近代文学', '近代文学，指1840年鸦片战争至1919年五四运动前夕的文学，即中国现代化孕育期的文学，反映了中国文学挥别传统、重塑现代的特殊精神追求。', NOW(), NOW());
+
+CREATE TABLE `librarianship`.`Untitled`  (
+    `id` int NOT NULL AUTO_INCREMENT COMMENT '用户编号',
+    `username` varchar(255) NULL COMMENT '账号',
+    `password` varchar(255) NULL COMMENT '密码',
+    `create_time` datetime NULL COMMENT '创建日期',
+    `update_time` datetime NULL,
+    PRIMARY KEY (`id` DESC)
+);
