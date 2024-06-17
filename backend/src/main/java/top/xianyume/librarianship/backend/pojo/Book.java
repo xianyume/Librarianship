@@ -1,18 +1,17 @@
 package top.xianyume.librarianship.backend.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class User {
+public class Book {
     private Integer id;
-    private String username;
-    private String nickname;
-    @JsonIgnore
-    private String password;
-    private Integer permission;
+    private String name;
+    private String author;
+    private Integer form;
+    private String description;
+    private String publisher;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
 }

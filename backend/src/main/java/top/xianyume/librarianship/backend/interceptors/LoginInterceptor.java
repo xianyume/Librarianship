@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+import top.xianyume.librarianship.backend.config.SpringConfig;
 import top.xianyume.librarianship.backend.utils.JwtUtil;
 import top.xianyume.librarianship.backend.utils.ThreadLocalUtil;
 

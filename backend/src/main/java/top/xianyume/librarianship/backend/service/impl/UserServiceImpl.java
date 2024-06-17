@@ -1,6 +1,5 @@
 package top.xianyume.librarianship.backend.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.xianyume.librarianship.backend.mapper.UserMapper;
 import top.xianyume.librarianship.backend.pojo.User;
@@ -14,8 +13,11 @@ import java.util.Map;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private UserMapper userMapper;
+    private final UserMapper userMapper;
+
+    public UserServiceImpl(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
 
     @Override
     public User findByUserName(String username) {

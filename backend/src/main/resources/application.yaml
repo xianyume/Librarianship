@@ -16,4 +16,5 @@ mybatis:
 jwt:
   # 持续时间 单位秒s
   # 默认 24小时 86400000
+  # @Value不能使用static
   remind-time: 86400000

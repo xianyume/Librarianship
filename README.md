@@ -14,10 +14,10 @@
 |:-----------:|:---:|:------:|:----:|
 |     id      | int | 非空自增主键 | 书籍编号 |
 |    name     |varchar(255)|| 书籍名称 |
-|   writer    |varchar(255)||  作者  |
+|   auther    |varchar(255)||  作者  |
 |    form     |int|| 书籍分类 |
 | description |varchar(255)|| 书籍介绍 |
-| publisher |varchar(255)|| 出版社  |
+|  publisher  |varchar(255)|| 出版社  |
 | create_time |datetime|| 创建日期 |
 | update_time |datetime|| 修改日期 |
 ### form表
@@ -29,11 +29,12 @@
 | create_time |datetime|| 创建日期 |
 | update_time |datetime|| 修改日期 |
 ### user表
-|     字段      |      类型      |   介绍   |  别名  |
-|:-----------:|:------------:|:------:|:----:|
-|     id      |     int      | 非空自增主键 | 用户编号 |
-|  username   |     int      |        |  账号  |
-|  nickname   | varchar(255) | |      |
-|  password   | varchar(255) | MD5加密  |  密码  |
-| create_time |   datetime   |        | 创建日期 |
-| update_time |   datetime   |        | 修改日期 |
+|     字段      |      类型      |   介绍   |            别名             |
+|:-----------:|:------------:|:------:|:-------------------------:|
+|     id      |     int      | 非空自增主键 |           用户编号            |
+|  username   |     int      |        |            账号             |
+|  nickname   | varchar(255) |        |                           |
+|  password   | varchar(255) | MD5加密  |            密码             |
+|      permission       |     int      |        | 0 普通用户<br>1 运维人员<br>2 管理员 |
+| create_time |   datetime   |        |           创建日期            |
+| update_time |   datetime   |        |           修改日期            |

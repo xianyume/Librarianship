@@ -10,25 +10,34 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Result<T> {
-    private Integer code;//业务状态码  0-成功  1-失败
-    private String message;//提示信息
-    private T data;//响应数据
+    // 1 成功
+    // 0 失败
+    private Integer code;
+    // 返回提示信息
+    private String msg;
+    // 返回数据
+    private T data;
 
-    //快速返回操作成功响应结果(带响应数据)
-    public static <E> Result<E> success(E data) {
-        return new Result<>(0, "操作成功", data);
+    public static <T> Result<T> success() {
+        Result<T> result = new Result<>();
+        result.setMsg("操作成功");
+        result.code = 1;
+        return result;
     }
 
-    //快速返回操作成功响应结果
-    public static Result success() {
-        return new Result(0, "操作成功", null);
+    public static <T> Result<T> success(T object) {
+        Result<T> result = new Result<>();
+        result.setMsg("操作成功");
+        result.data = object;
+        result.code = 1;
+        return result;
     }
 
-    public static Result success(String message) {
-        return new Result(0, message, null);
+    public static <T> Result<T> error(String msg) {
+        Result<T> result = new Result<>();
+        result.msg = msg;
+        result.code = 0;
+        return result;
     }
 
-    public static Result error(String message) {
-        return new Result(1, message, null);
-    }
 }
