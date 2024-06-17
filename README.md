@@ -29,10 +29,11 @@
 | create_time |datetime|| 创建日期 |
 | update_time |datetime|| 修改日期 |
 ### user表
-|     字段      |      类型      |   介绍   |        别名        |
-|:-----------:|:------------:|:------:|:----------------:|
-|     id      |     int      | 非空自增主键 |       用户编号       |
-|  username   |     int      |        |        账号        |
-|  password   | varchar(255) | MD5加密  |        密码        |
-| create_time |   datetime   |        |       创建日期       |
-| update_time |   datetime   |        |       修改日期       |
+|     字段      |      类型      |   介绍   |  别名  |
+|:-----------:|:------------:|:------:|:----:|
+|     id      |     int      | 非空自增主键 | 用户编号 |
+|  username   |     int      |        |  账号  |
+|  nickname   | varchar(255) | |      |
+|  password   | varchar(255) | MD5加密  |  密码  |
+| create_time |   datetime   |        | 创建日期 |
+| update_time |   datetime   |        | 修改日期 |

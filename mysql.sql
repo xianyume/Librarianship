@@ -38,11 +38,15 @@ VALUES ('古典文学', '中国古典文学是中国文学史上闪烁着灿烂�
 INSERT INTO `librarianship`.`form` (`form_name`, `form_description`, `create_time`, `update_time`)
 VALUES ('近代文学', '近代文学，指1840年鸦片战争至1919年五四运动前夕的文学，即中国现代化孕育期的文学，反映了中国文学挥别传统、重塑现代的特殊精神追求。', NOW(), NOW());
 
-CREATE TABLE `librarianship`.`Untitled`  (
+CREATE TABLE `librarianship`.`user`  (
     `id` int NOT NULL AUTO_INCREMENT COMMENT '用户编号',
     `username` varchar(255) NULL COMMENT '账号',
+    `nickname` varchar(255) NULL COMMENT '昵称',
     `password` varchar(255) NULL COMMENT '密码',
     `create_time` datetime NULL COMMENT '创建日期',
     `update_time` datetime NULL,
     PRIMARY KEY (`id` DESC)
 );
+INSERT INTO `librarianship`.`user` (`username`, `nickname`, `password`, `create_time`, `update_time`)
+VALUES ('admin', '管理员admin', 'e10adc3949ba59abbe56e057f20f883e', NOW(), NOW());
+-- 123456 的 md5 为 e10adc3949ba59abbe56e057f20f883e --
