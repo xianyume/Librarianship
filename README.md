@@ -1,9 +1,9 @@
 # Librarianship
 我和朋友一起的期末作业
 
-后端：SpringBoot 3.30、Mybatis、MySQL
+后端：SpringBoot 3.30、Mybatis、MySQL、Redis
 
-前端：Vue3、Vue Router
+前端：Vue3、Vue Router、Element-Plus
 ## 默认管理账号密码
 账号：admin
 
