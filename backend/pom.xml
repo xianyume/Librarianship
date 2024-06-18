@@ -17,11 +17,22 @@
 
     <properties>
         <java.version>22</java.version>
+
         <org.mybatis.spring.boot.mybatis-spring-boot-starter.version>
             3.0.3
         </org.mybatis.spring.boot.mybatis-spring-boot-starter.version>
+
         <com.auto0.java-jwt.version>4.4.0</com.auto0.java-jwt.version>
+
         <org.projectlombok.lombok.version>1.18.32</org.projectlombok.lombok.version>
+
+        <com.github.pagehelper.pagehelper-spring-boot-starter.version>
+            2.1.0
+        </com.github.pagehelper.pagehelper-spring-boot-starter.version>
+
+        <com.aliyun.oss.aliyun-sdk-oss.version>
+            3.17.4
+        </com.aliyun.oss.aliyun-sdk-oss.version>
     </properties>
 
     <dependencies>
@@ -73,6 +84,18 @@
             <artifactId>lombok</artifactId>
             <version>${org.projectlombok.lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${com.github.pagehelper.pagehelper-spring-boot-starter.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${com.aliyun.oss.aliyun-sdk-oss.version}</version>
         </dependency>
 
 

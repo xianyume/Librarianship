@@ -1,9 +1,11 @@
 # Librarianship
 我和朋友一起的期末作业
 
-后端：SpringBoot 3.30、Mybatis、MySQL、Redis
+后端：SpringBoot 3.30、Mybatis、MySQL、Redis、PageHelper
 
 前端：Vue3、Vue Router、Element-Plus
+
+Api文档：[Apifox](https://apifox.com/apidoc/shared-03781295-5a42-460e-b0d7-27980130ee31)
 ## 默认管理账号密码
 账号：admin
 

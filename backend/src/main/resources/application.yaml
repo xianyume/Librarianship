@@ -18,3 +18,8 @@ jwt:
   # 默认 24小时 86400000
   # @Value不能使用static
   remind-time: 86400000
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
