@@ -12,7 +12,7 @@ public interface FormMapper {
             " values(#{name}, #{description}, NOW(), NOW())")
     void add(Form form);
 
-    @Update("update form set name = #{name}, description = #{description}, update_time = #{updateTime} where id = #{id}")
+    @Update("update form set name = #{name}, description = #{description}, update_time = NOW() where id = #{id}")
     void update(Form form);
 
     @Delete("delete from form where id = #{id}")

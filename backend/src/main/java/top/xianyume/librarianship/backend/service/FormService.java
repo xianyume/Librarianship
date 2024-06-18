@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface FormService {
 
-    // 创建分类
     void create(Form form);
 
     void update(Form form);

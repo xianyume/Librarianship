@@ -42,7 +42,6 @@ public class FormController {
 
     @GetMapping("/info")
     public Result<Form> info(Integer id){
-        System.out.println(id);
         Form form = formService.findById(id);
         return Result.success(form);
     }

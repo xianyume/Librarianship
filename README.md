@@ -16,7 +16,7 @@ Api文档：[Apifox](https://apifox.com/apidoc/shared-03781295-5a42-460e-b0d7-27
 |:-----------:|:---:|:------:|:----:|
 |     id      | int | 非空自增主键 | 书籍编号 |
 |    name     |varchar(255)|| 书籍名称 |
-|   auther    |varchar(255)||  作者  |
+|   author    |varchar(255)||  作者  |
 |    form     |int|| 书籍分类 |
 | description |varchar(255)|| 书籍介绍 |
 |  publisher  |varchar(255)|| 出版社  |
