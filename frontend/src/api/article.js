@@ -16,17 +16,16 @@ export const articleCategoryUpdateService = (categoryData)=>{
 
 //文章分类删除
 export const articleCategoryDeleteService = (id)=>{
-
     return request.delete('/form/delete?id=' + id)
 }
 
 //文章列表查询
-export const articleListService = (params)=>{
-   return  request.get('/book',{params:params})
+export const articleListService = (id)=>{
+    return request.get('/book/pageInfo?formId=' + id)
 }
 
 //文章添加
 export const articleAddService = (articleData)=>{
-    return request.post('/book',articleData);
+    return request.post('/book/create', articleData);
 
 }

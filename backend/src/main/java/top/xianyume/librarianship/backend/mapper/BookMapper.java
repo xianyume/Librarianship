@@ -27,5 +27,8 @@ public interface BookMapper {
     List<Book> list();
 
     @Select("select * from book where form = #{formId}")
-    List<Book> pageInfo(Integer formId);
+    List<Book> pageInfoByFormId(Integer formId);
+
+    @Select("select * from book")
+    List<Book> pageInfo();
 }

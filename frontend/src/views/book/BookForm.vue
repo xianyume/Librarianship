@@ -143,8 +143,8 @@ const deleteCategory = (row) => {
         </template>
         <el-table :data="categorys" style="width: 100%">
             <el-table-column label="序号" width="100" type="index"> </el-table-column>
-            <el-table-column label="分类名称" prop="name"></el-table-column>
-            <el-table-column label="分类别名" prop="description"></el-table-column>
+            <el-table-column label="分类名称" width="100" prop="name"></el-table-column>
+            <el-table-column label="分类介绍" prop="description"></el-table-column>
             <el-table-column label="操作" width="100">
                 <template #default="{ row }">
                     <el-button :icon="Edit" circle plain type="primary" @click="showDialog(row)"></el-button>

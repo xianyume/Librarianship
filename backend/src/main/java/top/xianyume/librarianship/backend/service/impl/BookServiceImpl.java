@@ -1,17 +1,12 @@
 package top.xianyume.librarianship.backend.service.impl;
 
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 import org.springframework.stereotype.Service;
 import top.xianyume.librarianship.backend.mapper.BookMapper;
 import top.xianyume.librarianship.backend.pojo.Book;
-import top.xianyume.librarianship.backend.pojo.PageBean;
 import top.xianyume.librarianship.backend.service.BookService;
-import top.xianyume.librarianship.backend.utils.ThreadLocalUtil;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -49,19 +44,18 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public PageBean<Book> pageInfo(Integer pageNumber, Integer pageSize, Integer formId) {
+    public List<Book> pageInfo(Integer formId) {
 
-        PageBean<Book> pb = new PageBean<>();
+        try {
+            if (formId != 1) {
+                return bookMapper.pageInfoByFormId(formId);
+            }
+            else {
+                return bookMapper.pageInfo();
+            }
+        } catch (Exception _) {
 
-        PageHelper.startPage(pageNumber,pageSize);
-
-        List<Book> l = bookMapper.pageInfo(formId);
-        //Page中提供了方法,可以获取PageHelper分页查询后 得到的总记录条数和当前页数据
-        Page<Book> p = (Page<Book>) l;
-
-        pb.setTotal(p.getTotal());
-        pb.setItems(p.getResult());
-
-        return pb;
+        }
+        return bookMapper.pageInfo();
     }
 }

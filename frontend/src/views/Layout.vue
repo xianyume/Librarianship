@@ -71,7 +71,7 @@ const handleCommand = (command)=>{
     <!-- element-plus中的容器 -->
     <el-container class="layout-container">
         <!-- 左侧菜单 -->
-        <el-aside width="200px">
+        <el-aside width="300px">
             <div class="el-aside__logo"></div>
             <!-- element-plus的菜单标签 -->
             <el-menu active-text-color="#ffd04b" background-color="#232323"  text-color="#fff"

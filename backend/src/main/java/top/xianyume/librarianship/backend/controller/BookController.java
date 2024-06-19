@@ -51,12 +51,8 @@ public class BookController {
     }
 
     @GetMapping("/pageInfo")
-    public Result<PageBean<Book>> pageInfo(Integer pageNumber,
-                                           Integer pageSize,
-                                           @RequestParam(required = false) Integer formId
-    ) {
-        PageBean<Book> pb =  bookService.pageInfo(pageNumber, pageSize, formId);
-        return Result.success(pb);
-
+    public Result<List<Book>> pageInfo(Integer formId) {
+        List<Book> bookList =  bookService.pageInfo(formId);
+        return Result.success(bookList);
     }
 }

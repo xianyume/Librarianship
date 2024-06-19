@@ -17,5 +17,5 @@ public interface BookService {
 
     List<Book> list();
 
-    PageBean<Book> pageInfo(Integer pageNumber, Integer pageSize, Integer formId);
+    List<Book> pageInfo(Integer formId);
 }

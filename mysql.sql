@@ -34,7 +34,7 @@ CREATE TABLE `librarianship`.`form` (
 );
 
 INSERT INTO `librarianship`.`form` (`name`, `description`, `create_time`, `update_time`)
-VALUES ('默认分类', '默认分类', NOW(), NOW());
+VALUES ('无分类', '全部书籍算作此分类', NOW(), NOW());
 INSERT INTO `librarianship`.`form` (`name`, `description`, `create_time`, `update_time`)
 VALUES ('近代文学', '近代文学，指1840年鸦片战争至1919年五四运动前夕的文学，即中国现代化孕育期的文学，反映了中国文学挥别传统、重塑现代的特殊精神追求。', NOW(), NOW());
 INSERT INTO `librarianship`.`form` (`name`, `description`, `create_time`, `update_time`)
