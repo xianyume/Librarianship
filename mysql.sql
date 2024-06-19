@@ -17,7 +17,7 @@ CREATE TABLE `librarianship`.`book` (
                                         `publisher` varchar(255) NULL COMMENT '出版社',
                                         `create_time` datetime NULL,
                                         `update_time` datetime NULL,
-                                        PRIMARY KEY (`id` DESC)
+                                        PRIMARY KEY (`id` ASC)
 );
 INSERT INTO `librarianship`.`book` (`name`, `author`, `form`, `description`, `publisher`, `create_time`, `update_time`)
 VALUES ('呐喊', '鲁迅', '2', '短篇小说集。','北京新潮社', NOW(), NOW());
@@ -30,7 +30,7 @@ CREATE TABLE `librarianship`.`form` (
                                         `description` varchar(255) NULL COMMENT '书籍类别介绍',
                                         `create_time` datetime NULL,
                                         `update_time` datetime NULL,
-                                        PRIMARY KEY (`id` DESC)
+                                        PRIMARY KEY (`id` ASC)
 );
 
 INSERT INTO `librarianship`.`form` (`name`, `description`, `create_time`, `update_time`)
@@ -48,7 +48,7 @@ CREATE TABLE `librarianship`.`user`  (
                                          `permission` int NULL COMMENT '用户权限',
                                          `create_time` datetime NULL COMMENT '创建日期',
                                          `update_time` datetime NULL COMMENT '更新日期',
-                                         PRIMARY KEY (`id` DESC)
+                                         PRIMARY KEY (`id` ASC)
 );
 
 -- 管理员账号--

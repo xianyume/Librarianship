@@ -60,7 +60,7 @@ const login =async ()=>{
    //把得到的token存储到pinia中
    tokenStore.setToken(result.data)
    //跳转到首页 路由完成跳转
-   router.push('/')
+   router.push('/form')
 }
 
 //定义函数,清空数据模型的数据

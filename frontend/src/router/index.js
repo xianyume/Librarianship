@@ -13,7 +13,7 @@ import UserInfoVue from '@/views/user/UserInfo.vue'
 const routes = [
     { path: '/login', component: LoginVue },
     {
-        path: '/', component: LayoutVue,redirect:'/', children: [
+        path: '/', component: LayoutVue, redirect:'/login', children: [
             { path: '/form', component: FormVue },
             { path: '/book', component: BookVue },
             { path: '/user/info', component: UserInfoVue }

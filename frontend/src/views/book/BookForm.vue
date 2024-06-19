@@ -7,22 +7,22 @@ import { ref } from 'vue'
 const categorys = ref([
     {
         "id": 3,
-        "categoryName": "美食",
-        "categoryAlias": "my",
+        "name": "美食",
+        "description": "my",
         "createTime": "2023-09-02 12:06:59",
         "updateTime": "2023-09-02 12:06:59"
     },
     {
         "id": 4,
-        "categoryName": "娱乐",
-        "categoryAlias": "yl",
+        "name": "娱乐",
+        "description": "yl",
         "createTime": "2023-09-02 12:08:16",
         "updateTime": "2023-09-02 12:08:16"
     },
     {
         "id": 5,
-        "categoryName": "军事",
-        "categoryAlias": "js",
+        "name": "军事",
+        "description": "js",
         "createTime": "2023-09-02 12:08:33",
         "updateTime": "2023-09-02 12:08:33"
     }
@@ -40,16 +40,16 @@ const dialogVisible = ref(false)
 
 //添加分类数据模型
 const categoryModel = ref({
-    categoryName: '',
-    categoryAlias: ''
+    name: '',
+    description: ''
 })
 //添加分类表单校验
 const rules = {
-    categoryName: [
+    name: [
         { required: true, message: '请输入分类名称', trigger: 'blur' },
     ],
-    categoryAlias: [
-        { required: true, message: '请输入分类别名', trigger: 'blur' },
+  description: [
+        { required: true, message: '请输入分类介绍', trigger: 'blur' },
     ]
 }
 
@@ -73,8 +73,8 @@ const title = ref('')
 const showDialog = (row) => {
     dialogVisible.value = true; title.value = '编辑分类'
     //数据拷贝
-    categoryModel.value.categoryName = row.categoryName;
-    categoryModel.value.categoryAlias = row.categoryAlias;
+    categoryModel.value.name = row.name;
+    categoryModel.value.description = row.description;
     //扩展id属性,将来需要传递给后台,完成分类的修改
     categoryModel.value.id = row.id
 }
@@ -95,8 +95,8 @@ const updateCategory = async () => {
 
 //清空模型的数据
 const clearData = () => {
-    categoryModel.value.categoryName = '';
-    categoryModel.value.categoryAlias = '';
+    categoryModel.value.name = '';
+    categoryModel.value.description = '';
 }
 
 //删除分类
@@ -143,8 +143,8 @@ const deleteCategory = (row) => {
         </template>
         <el-table :data="categorys" style="width: 100%">
             <el-table-column label="序号" width="100" type="index"> </el-table-column>
-            <el-table-column label="分类名称" prop="categoryName"></el-table-column>
-            <el-table-column label="分类别名" prop="categoryAlias"></el-table-column>
+            <el-table-column label="分类名称" prop="name"></el-table-column>
+            <el-table-column label="分类别名" prop="description"></el-table-column>
             <el-table-column label="操作" width="100">
                 <template #default="{ row }">
                     <el-button :icon="Edit" circle plain type="primary" @click="showDialog(row)"></el-button>
@@ -159,11 +159,11 @@ const deleteCategory = (row) => {
         <!-- 添加分类弹窗 -->
         <el-dialog v-model="dialogVisible" :title="title" width="30%">
             <el-form :model="categoryModel" :rules="rules" label-width="100px" style="padding-right: 30px">
-                <el-form-item label="分类名称" prop="categoryName">
-                    <el-input v-model="categoryModel.categoryName" minlength="1" maxlength="10"></el-input>
+                <el-form-item label="分类名称" prop="name">
+                    <el-input v-model="categoryModel.name" minlength="1" maxlength="10"></el-input>
                 </el-form-item>
-                <el-form-item label="分类介绍" prop="categoryAlias">
-                    <el-input v-model="categoryModel.categoryAlias" minlength="1" maxlength="15"></el-input>
+                <el-form-item label="分类介绍" prop="description">
+                    <el-input v-model="categoryModel.description" minlength="1" maxlength="15"></el-input>
                 </el-form-item>
             </el-form>
             <template #footer>
